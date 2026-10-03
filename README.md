@@ -18,6 +18,10 @@ skills_vault/
     scripts/        helper scripts used by the skill
 ```
 
+## License
+
+Released under the [MIT License](LICENSE).
+
 ## Adding a skill
 
 1. Create a folder named after the skill.
