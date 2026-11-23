@@ -6,14 +6,14 @@
 #   1. SCREENER_DOCS_PYTHON  - explicit interpreter (e.g. an existing venv's bin/python)
 #   2. uv                    - `uv run --script` with inline deps (cached, isolated)
 #   3. managed venv          - auto-created at $SCREENER_DOCS_VENV
-#                              (default: ~/.openclaw/tools/screener-docs/venv)
+#                              (default: ${XDG_STATE_HOME:-~/.local/state}/screener-docs/venv)
 set -euo pipefail
 
 SKILL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 SCRIPT="$SKILL_DIR/scripts/screener_docs.py"
 REQS="$SKILL_DIR/requirements.txt"
-STATE_DIR="${OPENCLAW_STATE_DIR:-$HOME/.openclaw}"
-VENV="${SCREENER_DOCS_VENV:-$STATE_DIR/tools/screener-docs/venv}"
+STATE_DIR="${XDG_STATE_HOME:-$HOME/.local/state}"
+VENV="${SCREENER_DOCS_VENV:-$STATE_DIR/screener-docs/venv}"
 
 # 1. Explicit interpreter
 if [[ -n "${SCREENER_DOCS_PYTHON:-}" ]]; then

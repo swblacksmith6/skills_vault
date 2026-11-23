@@ -1,0 +1,9 @@
+{
+  "name": "equity-report-publisher",
+  "version": "0.2.0",
+  "description": "Fetch a listed Indian company's filings from screener.in, run the equity deep dive, build one combined HTML investment report (with a 'what changed since last time' storyline for repeat companies and a non-removable educational disclaimer), and publish it to your GitHub Pages site. Your repo and site are read from a settings file on your computer, not stored in the plugin.",
+  "author": {
+    "name": "Harsha (Lusid Logix)"
+  },
+  "keywords": ["equity research", "SOIC", "investment report", "github pages", "screener.in"]
+}
